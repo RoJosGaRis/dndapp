@@ -26,4 +26,4 @@ By clicking on the buttons from the menu, you can change filters, and find resul
 
 | Before Filter | After Filter | 
 |--:|---|
-|  <img src="public/ConsultFilter.png" alt= "Before Filter" height="300"> | <img src="public/ConsultResult.png" alt= "After Filter" height="300">  |   
+|  <img src="public/ConsultFilter.PNG" alt= "Before Filter" height="300"> | <img src="public/ConsultResult.PNG" alt= "After Filter" height="300">  |   
