@@ -3,7 +3,7 @@
 This first iteration will provide basic tools for NPC generation and administration.
 
 ## Tools in use
-The application is built on the React.js framework.
+The application is built on the React.js framework as the front-end. It also implements a connection to a Node.js [back-end API](https://github.com/RoJosGaRis/DnDApp_Server), which connects to a MongoDB online database.
 
 ## Color palette
 ### CSS HEX
