@@ -34,7 +34,7 @@
 .page-buttons-button:not(.active):hover,
 .page-buttons-button:not(.active):focus {
   filter: drop-shadow(0px 0px 1px #03120e);
-  background-color: #e8ebf7;
+  background-color: #a1e8cc;
   transform: translateY(10px);
   transition: 0.2s;
   outline: none;
@@ -44,17 +44,18 @@
   width: 100px;
   height: 50px;
   position: absolute;
-  background-color: #845c2f;
+  background-color: #137547;
   /* filter: invert(100%); */
   transform: translateY(10px) translateX(-50px);
   border-radius: 0px 25px 25px 0px;
+  border: #a1e8cc solid 3px;
 }
 
 .active,
 .active:focus {
   outline: none;
   filter: drop-shadow(0px 10px 1px #03120e);
-  background-color: #a27035;
+  background-color: #137547;
   /* transform: translateY(10px); */
   transition: 0.2s;
 }

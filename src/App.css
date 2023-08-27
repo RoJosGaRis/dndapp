@@ -1,9 +1,6 @@
 .App {
   background: rgb(2, 0, 36);
-  background: linear-gradient(
-    rgba(232, 235, 247, 1) 0%,
-    rgba(0, 108, 103, 1) 100%
-  );
+  background: linear-gradient(#137547 0%, #656839 50%);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -36,4 +33,51 @@
   display: block;
   transform: translateY(0%);
   animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    position: absolute;
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(100%);
+    position: relative;
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    position: relative;
+    opacity: 1;
+  }
+}
+@keyframes slideToTop {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-100%);
+    opacity: 0;
+    position: absolute;
+    display: none;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+    /* position: absolute; */
+    display: none;
+  }
+}
+@keyframes slideFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+    /* position: absolute; */
+  }
 }
