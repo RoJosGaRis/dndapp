@@ -65,7 +65,8 @@
   /* filter: drop-shadow(10px 0px 5px rgba(0, 0, 0, 0.5)); */
 }
 
-.filter-button:hover {
+.filter-button:hover,
+.filter-button:focus {
   background-color: #656839;
   color: #a1e8cc;
   transform: scale(0.99);
