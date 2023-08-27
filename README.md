@@ -25,5 +25,5 @@ By clicking on the buttons from the menu, you can change filters, and find resul
 (Currently only displaying information as JSON data)
 
 | Before Filter | After Filter | 
-|--:|---|
-|  <img src="public/ConsultFilter.PNG" alt= "Before Filter" height="300"> | <img src="public/ConsultResult.PNG" alt= "After Filter" height="300">  |   
+|---|---|
+|  <img src="public/ConsultFilter.PNG" alt= "Before Filter" width="700"> | <img src="public/ConsultResult.PNG" alt= "After Filter" width="700">  |   
