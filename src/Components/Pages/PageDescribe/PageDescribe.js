@@ -1,11 +1,7 @@
 import PageContent from "../PageContent";
 
 const PageDescribe = (props) => {
-  return (
-    <PageContent className={props.className}>
-      <p>PageDescribe</p>
-    </PageContent>
-  );
+  return <PageContent className={props.className}></PageContent>;
 };
 
 export default PageDescribe;
