@@ -6,10 +6,12 @@ import "./PageConsult.css";
 
 import PageContent from "../PageContent";
 import ResultsList from "./ResultsList";
+import ResultsDisplay from "./ResultsDisplay";
 
 const PageConsult = (props) => {
   const [data, setData] = useState([]);
   const [url, setUrl] = useState([BaseDnDAPIUrl]);
+  const [searchResults, setSearchResults] = useState("");
 
   const addToFilter = (filter) => {
     setUrl((prev) => [...prev, filter]);
@@ -23,7 +25,7 @@ const PageConsult = (props) => {
     });
   };
 
-  const fetchInfo = useCallback(() => {
+  const fetchInfo = useCallback(async () => {
     let completeURL = "";
     url.forEach((u) => {
       completeURL = completeURL + u + "/";
@@ -33,8 +35,14 @@ const PageConsult = (props) => {
     return fetch(completeURL)
       .then((res) => res.json())
       .then((d) => {
-        setData(d);
-        console.log(d);
+        if (url.length === 3) {
+          removeFromFilter();
+          setSearchResults(d);
+          console.log(d);
+        } else {
+          setData(d);
+          console.log(d);
+        }
       });
   }, [url]);
 
@@ -47,21 +55,16 @@ const PageConsult = (props) => {
       <RemoveScrollBar />
 
       <ResultsList
+        className="results-list"
         data={
           Object.keys(data)[1] === "results" ? data.results : Object.keys(data)
         }
         addToFilter={addToFilter}
+        removeFromFilter={removeFromFilter}
         isResults={Object.keys(data)[1] === "results"}
       />
-      <button
-        type="button"
-        className={`filter-button back-button ${
-          url.length === 1 ? "hidden" : ""
-        }`}
-        onClick={removeFromFilter}
-      >
-        Back
-      </button>
+
+      <ResultsDisplay results={searchResults}></ResultsDisplay>
     </PageContent>
   );
 };

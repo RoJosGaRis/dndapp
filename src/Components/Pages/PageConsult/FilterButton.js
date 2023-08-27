@@ -5,7 +5,7 @@ const FilterButton = (props) => {
       className="filter-button"
       onClick={() => props.onAddFilter(props.filter)}
     >
-      {props.name}
+      {props.name.replace(/_/g, " ")}
     </button>
   );
 };

@@ -1,8 +1,8 @@
 import FilterButton from "./FilterButton";
 
-const ResultsList = ({ data, addToFilter, isResults }) => {
+const ResultsList = ({ data, addToFilter, removeFromFilter, isResults }) => {
   return (
-    <div className="results-list">
+    <div className="results-list-wrapper">
       {data.map((d) => {
         return (
           <FilterButton
@@ -12,6 +12,13 @@ const ResultsList = ({ data, addToFilter, isResults }) => {
           />
         );
       })}
+      <button
+        type="button"
+        className={`filter-button back-button ${!isResults ? "hidden" : ""}`}
+        onClick={removeFromFilter}
+      >
+        Back
+      </button>
     </div>
   );
 };
