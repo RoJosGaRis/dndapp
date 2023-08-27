@@ -7,8 +7,8 @@ The application is built on the React.js framework.
 
 ## Color palette
 ### CSS HEX
-- --caribbean-current: #006c67ff;
-- --golden-brown: #a27035ff;
-- --ghost-white: #e8ebf7ff;
-- --powder-blue: #acbed8ff;
-- --night: #03120eff;
+- --dark-moss-green: #656839ff; 
+- --aquamarine: #a1e8ccff;
+- --dark-purple: #370926ff;
+- --gunmetal: #012a36ff;
+- --dark-spring-green: #137547ff;
