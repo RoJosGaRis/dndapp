@@ -7,8 +7,17 @@ The application is built on the React.js framework.
 
 ## Color palette
 ### CSS HEX
-- --caribbean-current: #006c67ff;
-- --golden-brown: #a27035ff;
-- --ghost-white: #e8ebf7ff;
-- --powder-blue: #acbed8ff;
-- --night: #03120eff;
+- --dark-moss-green: #656839ff; 
+- --aquamarine: #a1e8ccff;
+- --dark-purple: #370926ff;
+- --gunmetal: #012a36ff;
+- --dark-spring-green: #137547ff;
+
+# Functions
+## Move between pages
+The buttons on the left allow for quick movement between pages:
+
+
+## Consult
+The first page displays a simple menu with the queried data from https://www.dnd5eapi.co/api/.
+By 
