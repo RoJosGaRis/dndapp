@@ -12,3 +12,12 @@ The application is built on the React.js framework.
 - --dark-purple: #370926ff;
 - --gunmetal: #012a36ff;
 - --dark-spring-green: #137547ff;
+
+# Functions
+## Move between pages
+The buttons on the left allow for quick movement between pages:
+
+
+## Consult
+The first page displays a simple menu with the queried data from https://www.dnd5eapi.co/api/.
+By 
