@@ -7,9 +7,10 @@
 .creature_features_wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex: 1;
+  /* overflow: scroll; */
 }
 
 .creature_actions_wrapper {
@@ -30,6 +31,8 @@
   border-bottom: #a1e8cc solid 3px;
   border-radius: 0px 0px 25px 25px;
   text-align: center;
+  filter: drop-shadow(0px 5px 0px rgba(0, 0, 0, 1));
+  transition: all 0.2s;
 }
 
 .creature_names_name {
@@ -43,6 +46,7 @@
 .creature_names_wrapper:hover,
 .creature_names_wrapper:focus {
   filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1)) invert();
+  transform: translateY(5px);
   transition: all 0.2s;
   border: #012a36 solid 3px;
 }
@@ -81,7 +85,8 @@
 
 .ability_scores_score_ability {
   text-transform: uppercase;
-  font-size: clamp(12px, 15px, 20px);
+  font-weight: bold;
+  font-size: clamp(12px, 12px, 20px);
   border-bottom: #a1e8cc solid 3px;
   padding: 10px;
 }
@@ -149,12 +154,48 @@
   transform: scale(1);
 }
 
-.creature_specs_information.loading {
+.loading {
   transform: scale(0);
   transition: all 0.2s;
 }
 
 .creature_specs_information:not(.loading):hover {
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1)) invert();
+  transform: translateY(10px);
+  transition: all 0.2s;
+  border: #012a36 solid 3px;
+}
+
+.creature_bio_wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.creature_bio_information_wrapper {
+  /* flex: 1; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.creature_bio_information {
+  margin: 10px;
+  border: #a1e8cc solid 3px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #012a36;
+  height: 90%;
+  /* width: 25%; */
+  text-overflow: clip;
+  filter: drop-shadow(0px 10px 0px rgba(0, 0, 0, 1));
+  transition: all 0.2s;
+  transform: scale(1);
+}
+
+.creature_bio_information:hover {
   filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1)) invert();
   transform: translateY(10px);
   transition: all 0.2s;

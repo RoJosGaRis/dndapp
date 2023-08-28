@@ -32,26 +32,29 @@
 
 .results-list-wrapper {
   flex: 0.75;
-  height: 100%;
+  height: calc(100% - 25px);
   width: clamp(200px, 200px, auto);
   top: 0px;
   display: flex;
   flex-direction: column;
+  gap: 5px;
   align-items: flex-start;
   /* justify-content: space-around; */
-  margin: 0px 10px 0px 0px;
+  margin: 10px;
+  border-radius: 25px;
   /* padding: 10px; */
-  border-right: #a1e8cc solid 3px;
+  border: #a1e8cc solid 3px;
   /* border-radius: 25px; */
   background-color: #370926;
-  overflow: scroll;
+  overflow-x: scroll;
   /* width: 90%; */
   -ms-overflow-style: none; /* IE and Edge */
+  filter: drop-shadow(10px 10px 0px rgba(0, 0, 0, 0.9));
   /* width: fit-content; */
-  filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.9));
 }
 
 .filter-button {
+  filter: drop-shadow(0px 5px 0px rgba(0, 0, 0, 0.9));
   height: clamp(50px, 50px, auto);
   width: clamp(200px, 100%, 100%);
   flex: 1;
@@ -60,23 +63,35 @@
   font-size: 20px;
   text-transform: uppercase;
   background-color: #012a36;
-  border: #012a36 solid 3px;
+  /* border: #012a36 solid 3px; */
   transition: all 0.5s;
   /* filter: drop-shadow(10px 0px 5px rgba(0, 0, 0, 0.5)); */
 }
 
 .filter-button:hover,
 .filter-button:focus {
-  background-color: #656839;
-  color: #a1e8cc;
+  /* background-color: #656839; */
+  /* color: #a1e8cc; */
   transform: scale(0.99);
-  border: #012a36 solid 3px;
+  /* border: #012a36 solid 3px; */
   transition: all 0.1s;
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1)) invert();
+  transform: translateY(5px);
+  transition: all 0.2s;
 }
 
+.back-button {
+  position: sticky;
+  bottom: 0px;
+  display: none;
+  transform: translateY(0%);
+  animation: slideFromBottom 0.5s ease-in-out;
+  background-color: rgba(162, 111, 52, 1);
+}
 .back-button:not(.hidden) {
   position: sticky;
   bottom: 0px;
+  display: block;
   transform: translateY(0%);
   animation: slideFromBottom 0.5s ease-in-out;
   background-color: rgba(162, 111, 52, 1);

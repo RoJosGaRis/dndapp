@@ -2,6 +2,7 @@ import styles from "./PageCreate.module.css";
 
 import CreatureNames from "./CreatureNames";
 import CreatureBio from "./CreatureBio";
+import CreatureTraits from "./CreatureTraits";
 
 const CreatureFeatures = (props) => {
   return (
@@ -12,6 +13,13 @@ const CreatureFeatures = (props) => {
         names={props.names}
       ></CreatureNames>
       <CreatureBio
+        challenge={
+          props.creature === undefined ? " " : props.creature.challenge
+        }
+        race={props.creature === undefined ? " " : props.creature.race}
+        alignment={
+          props.creature === undefined ? " " : props.creature.alignment
+        }
         hitPoints={
           props.creature === undefined ? " " : props.creature.hitPoints
         }
@@ -20,6 +28,11 @@ const CreatureFeatures = (props) => {
         }
         speed={props.creature === undefined ? " " : props.creature.speed}
       ></CreatureBio>
+      <CreatureTraits
+        featuresAndTraits={
+          props.creature === undefined ? " " : props.creature.featuresAndTraits
+        }
+      ></CreatureTraits>
     </div>
   );
 };

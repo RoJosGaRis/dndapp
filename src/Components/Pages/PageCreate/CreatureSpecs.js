@@ -7,7 +7,7 @@ const CreatureSpecs = (props) => {
       <p
         className={`${
           props.skills === "" || props.skills === " " ? styles.loading : ""
-        }${styles.creature_specs_information}`}
+        } ${styles.creature_specs_information}`}
       >
         <b>{props.skills === "" || props.skills === " " ? "" : "Skills:"}</b>
         {props.skills === "" || props.skills === " "
@@ -22,7 +22,7 @@ const CreatureSpecs = (props) => {
           props.savingThrows === "" || props.savingThrows === " "
             ? styles.loading
             : ""
-        }${styles.creature_specs_information}`}
+        } ${styles.creature_specs_information}`}
       >
         <b>
           {props.savingThrows === "" || props.savingThrows === " "
@@ -39,7 +39,7 @@ const CreatureSpecs = (props) => {
       <p
         className={`${
           props.senses === "" || props.senses === " " ? styles.loading : ""
-        }${styles.creature_specs_information}`}
+        } ${styles.creature_specs_information}`}
       >
         <b>{props.senses === "" || props.senses === " " ? "" : "Senses:"}</b>
         {props.senses === "" || props.senses === " "
@@ -54,7 +54,7 @@ const CreatureSpecs = (props) => {
           props.languages === "" || props.languages === " "
             ? styles.loading
             : ""
-        }${styles.creature_specs_information}`}
+        } ${styles.creature_specs_information}`}
       >
         <b>{props.languages === "" ? "" : "Languages:"}</b>
         {props.languages === "" || props.languages === " "
