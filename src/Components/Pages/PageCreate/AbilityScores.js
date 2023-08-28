@@ -3,7 +3,11 @@ import AbilityScore from "./AbilityScore";
 
 const AbilityScores = (props) => {
   return (
-    <div className={styles.ability_scores_wrapper}>
+    <div
+      className={`${props.scores === undefined ? "loading " : ""}${
+        styles.ability_scores_wrapper
+      }`}
+    >
       {props.scores === undefined
         ? []
         : Object.values(props.scores).map((score, index) => {

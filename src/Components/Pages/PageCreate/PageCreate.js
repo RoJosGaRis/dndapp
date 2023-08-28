@@ -51,6 +51,7 @@ const PageCreate = (props) => {
       })} */}
       <CreatureSkills currentCreature={currentCreature}></CreatureSkills>
       <CreatureFeatures
+        creature={currentCreature}
         names={names}
         onCurrentCreatureChange={onCurrentCreatureChange}
       ></CreatureFeatures>

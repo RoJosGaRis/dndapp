@@ -1,5 +1,7 @@
 import styles from "./PageCreate.module.css";
+
 import CreatureNames from "./CreatureNames";
+import CreatureBio from "./CreatureBio";
 
 const CreatureFeatures = (props) => {
   return (
@@ -9,6 +11,15 @@ const CreatureFeatures = (props) => {
         onCurrentCreatureChange={props.onCurrentCreatureChange}
         names={props.names}
       ></CreatureNames>
+      <CreatureBio
+        hitPoints={
+          props.creature === undefined ? " " : props.creature.hitPoints
+        }
+        armorClass={
+          props.creature === undefined ? " " : props.creature.armorClass
+        }
+        speed={props.creature === undefined ? " " : props.creature.speed}
+      ></CreatureBio>
     </div>
   );
 };
