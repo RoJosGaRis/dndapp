@@ -55,7 +55,9 @@ const PageCreate = (props) => {
         names={names}
         onCurrentCreatureChange={onCurrentCreatureChange}
       ></CreatureFeatures>
-      <CreatureActions></CreatureActions>
+      <CreatureActions
+        actions={currentCreature === undefined ? " " : currentCreature.actions}
+      ></CreatureActions>
     </PageContent>
   );
 };
