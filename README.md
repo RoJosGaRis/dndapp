@@ -7,6 +7,7 @@ The application is built on the React.js framework as the front-end. It also imp
 
 ## Color palette
 ### CSS HEX
+
 - --dark-moss-green: #656839ff; 
 - --aquamarine: #a1e8ccff;
 - --dark-purple: #370926ff;
@@ -27,3 +28,11 @@ more details and information are provided. (Currently non-parsed data in JSON Fo
 | Before Filters | After Filters |
 |---|---|
 | <img src="public/ConsultFilter.PNG" alt= "Before Filter" width="700"> | <img src="public/ConsultResult.PNG" alt= "Before Filter" width="700">|
+
+## Creature consult
+The second page displays a dynamically changing menu with hoverable spaces for creatures information.
+Quering from a MongoDB database accessed through the [back-end API](https://github.com/RoJosGaRis/DnDApp_Server), displays the names of all creatures stored through a dropdown.
+
+| On origin | Choosing | Filtered |
+|:-:|:-:|:-:|
+| | | |
