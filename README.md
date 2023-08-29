@@ -33,6 +33,11 @@ more details and information are provided. (Currently non-parsed data in JSON Fo
 The second page displays a dynamically changing menu with hoverable spaces for creatures information.
 Quering from a MongoDB database accessed through the [back-end API](https://github.com/RoJosGaRis/DnDApp_Server), displays the names of all creatures stored through a dropdown.
 
-| On origin | Choosing | Filtered |
-|:-:|:-:|:-:|
-| | | |
+| On origin |
+|:-:|
+|<img src="public/CreatePageOrigin.PNG" alt= "Before Filter" width="700"> |
+|Choosing |
+| <img src="public/CreatePageSelect.PNG" alt= "Before Filter" width="700">|
+|Filtered |
+|<img src="public/CreatePageDisplayed.PNG" alt= "Before Filter" width="700"> |
+
