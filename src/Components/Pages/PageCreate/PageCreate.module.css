@@ -201,3 +201,25 @@
   transition: all 0.2s;
   border: #012a36 solid 3px;
 }
+
+.creature_traits_wrapper {
+  filter: drop-shadow(0px 10px 0px rgba(0, 0, 0, 1));
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 10px;
+  border: #a1e8cc solid 3px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #012a36;
+  height: 90%;
+  transition: 0.2s;
+}
+
+.creature_traits_wrapper:hover {
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 1)) invert();
+  transform: translateY(10px);
+  transition: all 0.2s;
+  border: #012a36 solid 3px;
+}
