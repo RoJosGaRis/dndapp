@@ -17,25 +17,39 @@ const PageCreate = (props) => {
     newCreatureID = newCreatureID.target.value;
     setCurrentCreatureID(newCreatureID);
     console.log(newCreatureID);
-    await fetch(`http://localhost:4000/creatures/${newCreatureID}`)
-      .then((res) => {
-        return res.json();
-      })
-      .then(async (d) => {
-        await setCurrentCreature(d);
-        console.log(d);
-        console.log(currentCreature.abilityScores);
-      });
+    try {
+      await fetch(`http://localhost:4000/creatures/${newCreatureID}`)
+        .then((res) => {
+          if (res === undefined) {
+            return res;
+          }
+          return res.json();
+        })
+        .then(async (d) => {
+          setCurrentCreature(d);
+          // console.log(d);
+          // console.log(currentCreature.abilityScores);
+        });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const fetchData = useCallback(async () => {
-    await fetch("http://localhost:4000/creatures/names")
-      .then((res) => {
-        return res.json();
-      })
-      .then((d) => {
-        setNames(d);
-      });
+    try {
+      await fetch("http://localhost:4000/creatures/names")
+        .then((res) => {
+          if (res === undefined) {
+            return res;
+          }
+          return res.json();
+        })
+        .then((d) => {
+          setNames(d);
+        });
+    } catch (error) {
+      console.log(error);
+    }
   }, []);
 
   useEffect(() => {
