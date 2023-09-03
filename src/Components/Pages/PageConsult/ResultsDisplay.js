@@ -7,6 +7,7 @@ const ResultsDisplay = ({ results, type }) => {
       {type === "ability-scores" && (
         <AbilityScores results={results}></AbilityScores>
       )}
+      {type === "alignments" && <Alignments results={results}></Alignments>}
     </div>
   );
 };
