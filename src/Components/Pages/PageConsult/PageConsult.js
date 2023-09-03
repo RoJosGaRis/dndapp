@@ -64,7 +64,10 @@ const PageConsult = (props) => {
         isResults={Object.keys(data)[1] === "results"}
       />
 
-      <ResultsDisplay results={searchResults}></ResultsDisplay>
+      <ResultsDisplay
+        results={searchResults}
+        type={url[url.length - 1]}
+      ></ResultsDisplay>
     </PageContent>
   );
 };
