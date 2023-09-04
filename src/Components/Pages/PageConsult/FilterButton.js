@@ -1,8 +1,10 @@
+import styles from "./PageConsult.module.css";
+
 const FilterButton = (props) => {
   return (
     <button
       type="button"
-      className="filter-button"
+      className={styles.filterButton}
       onClick={() => props.onAddFilter(props.filter)}
     >
       {props.name.replace(/_/g, " ")}

@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { BaseDnDAPIUrl } from "../../../Utils/Constants";
 import { RemoveScrollBar } from "react-remove-scroll-bar";
 
-import "./PageConsult.css";
+import styles from "./PageConsult.module.css";
 
 import PageContent from "../PageContent";
 import ResultsList from "./ResultsList";
@@ -21,9 +21,9 @@ const PageConsult = (props) => {
     setUrl((prev) => {
       const newUrl = [...prev];
       newUrl.splice(-1, 1);
-      // if (goBack) {
-      //   setSearchResults("");
-      // }
+      if (newUrl.length === 1) {
+        setSearchResults("");
+      }
 
       return newUrl;
     });
@@ -45,7 +45,7 @@ const PageConsult = (props) => {
           console.log(d);
         } else {
           setData(d);
-
+          // setSearchResults("");
           console.log(d);
         }
       });
@@ -56,11 +56,11 @@ const PageConsult = (props) => {
   }, [fetchInfo]);
 
   return (
-    <PageContent className={`page-consult ${props.className}`}>
+    <PageContent className={`${styles.pageConsult} ${props.className}`}>
       <RemoveScrollBar />
 
       <ResultsList
-        className="results-list"
+        className={styles.resultsList}
         data={
           Object.keys(data)[1] === "results" ? data.results : Object.keys(data)
         }

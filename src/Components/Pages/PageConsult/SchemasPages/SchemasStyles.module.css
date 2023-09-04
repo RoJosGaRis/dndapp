@@ -7,16 +7,21 @@
   align-items: flex-start;
   background-color: #012a36;
   color: #a1e8cc;
-  height: clamp(100px, auto, 80%);
+  height: calc(100% - 20px);
   /* font-size: 40px; */
-  margin: 10px;
   padding: 10px;
   padding-top: 0px;
   border: #a1e8cc solid 3px;
   border-radius: 20px;
   filter: drop-shadow(0px 10px 0px rgba(0, 0, 0, 1));
   transition: all 0.2s;
+  overflow: scroll;
 }
+
+.resultsDisplay::-webkit-scrollbar {
+  display: none;
+}
+
 .mainHeader {
   /* animation-duration: 0.3s;
   animation-name: appear; */
