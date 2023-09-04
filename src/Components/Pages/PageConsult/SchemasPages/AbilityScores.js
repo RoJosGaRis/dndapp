@@ -12,23 +12,23 @@ const AbilityScores = ({ results }) => {
       </div>
       <div className={results.desc === undefined ? "" : styles.secondHeader}>
         {results.desc === undefined ? "" : "Description:"}
-      </div>
-      <div className={styles.description}>
-        {results.desc === undefined
-          ? ""
-          : results.desc.map((d, index) => {
-              return <p key={index}>{d}</p>;
-            })}
+        <div className={styles.description}>
+          {results.desc === undefined
+            ? ""
+            : results.desc.map((d, index) => {
+                return <p key={index}>{d}</p>;
+              })}
+        </div>
       </div>
       <div className={results.skills === undefined ? "" : styles.secondHeader}>
         {results.skills === undefined ? "" : "Skills:"}
-      </div>
-      <div className={styles.description}>
-        {results.skills === undefined
-          ? ""
-          : results.skills.map((d, index) => {
-              return <li key={index}>{d.name}</li>;
-            })}
+        <div className={styles.description}>
+          {results.skills === undefined
+            ? ""
+            : results.skills.map((d, index) => {
+                return <li key={index}>{d.name}</li>;
+              })}
+        </div>
       </div>
     </div>
   );
