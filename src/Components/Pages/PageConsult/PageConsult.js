@@ -21,6 +21,10 @@ const PageConsult = (props) => {
     setUrl((prev) => {
       const newUrl = [...prev];
       newUrl.splice(-1, 1);
+      // if (goBack) {
+      //   setSearchResults("");
+      // }
+
       return newUrl;
     });
   };
@@ -41,6 +45,7 @@ const PageConsult = (props) => {
           console.log(d);
         } else {
           setData(d);
+
           console.log(d);
         }
       });

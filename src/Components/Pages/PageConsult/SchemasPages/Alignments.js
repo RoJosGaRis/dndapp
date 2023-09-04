@@ -8,9 +8,9 @@ const Alignments = ({ results }) => {
       </div>
       <div className={results.desc === undefined ? "" : styles.secondHeader}>
         {results.desc === undefined ? "" : "Description:"}
-      </div>
-      <div className={styles.description}>
-        {results.desc === undefined ? "" : results.desc}
+        <div className={styles.description}>
+          {results.desc === undefined ? "" : results.desc}
+        </div>
       </div>
     </div>
   );
