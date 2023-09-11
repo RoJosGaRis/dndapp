@@ -1,8 +1,9 @@
 import FilterButton from "./FilterButton";
+import styles from "./PageConsult.module.css";
 
 const ResultsList = ({ data, addToFilter, removeFromFilter, isResults }) => {
   return (
-    <div className="results-list-wrapper">
+    <div className={styles.resultsListWrapper}>
       {data.map((d) => {
         return (
           <FilterButton
@@ -14,7 +15,7 @@ const ResultsList = ({ data, addToFilter, removeFromFilter, isResults }) => {
       })}
       <button
         type="button"
-        className={`filter-button back-button ${!isResults ? "hidden" : ""}`}
+        className={`${styles.filterButton} ${styles.backButton} ${!isResults ? "hidden" : ""}`}
         onClick={removeFromFilter}
       >
         Back

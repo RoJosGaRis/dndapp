@@ -14,7 +14,7 @@
 }
 
 .pages-wrapper {
-  height: clamp(100px, 100vh, 100vh);
+  height: clamp(200px, 100vh, 100vh);
   width: clamp(100px, 100vw, 100vw);
   display: flex;
   flex-direction: column;
@@ -25,8 +25,8 @@
 
 .hidden {
   animation: slideToTop 0.5s ease-in-out forwards;
-  /* transform: translateY(-100%);
-  display: none; */
+  /* transform: translateY(-100%);*/
+  display: none !important;
 }
 
 .shown {

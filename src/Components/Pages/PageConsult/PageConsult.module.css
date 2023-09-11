@@ -1,4 +1,4 @@
-.page-consult {
+.pageConsult {
   overflow: scroll;
   display: flex;
   /* flex: 1; */
@@ -7,10 +7,10 @@
   scrollbar-width: none;
 }
 
-.page-consult::-webkit-scrollbar {
+.pageConsult::-webkit-scrollbar {
   display: none;
 }
-.results-list-wrapper::-webkit-scrollbar {
+.resultsListWrapper::-webkit-scrollbar {
   display: none;
 }
 
@@ -22,15 +22,16 @@
   scrollbar-width: none;
 } */
 
-.results-display {
+.resultsDisplay {
   flex: 2;
-  height: 100%;
+  height: calc(100%-60px);
   width: 100%;
   overflow-wrap: break-word;
+  overflow: hidden;
   padding: 30px;
 }
 
-.results-list-wrapper {
+.resultsListWrapper {
   flex: 0.75;
   height: calc(100% - 25px);
   width: clamp(200px, 200px, auto);
@@ -53,7 +54,7 @@
   /* width: fit-content; */
 }
 
-.filter-button {
+.filterButton {
   filter: drop-shadow(0px 5px 0px rgba(0, 0, 0, 0.9));
   height: clamp(50px, 50px, auto);
   width: clamp(200px, 100%, 100%);
@@ -68,8 +69,8 @@
   /* filter: drop-shadow(10px 0px 5px rgba(0, 0, 0, 0.5)); */
 }
 
-.filter-button:hover,
-.filter-button:focus {
+.filterButton:hover,
+.filterButton:focus {
   /* background-color: #656839; */
   /* color: #a1e8cc; */
   transform: scale(0.99);
@@ -80,7 +81,7 @@
   transition: all 0.2s;
 }
 
-.back-button {
+.backButton {
   position: sticky;
   bottom: 0px;
   display: none;
@@ -88,7 +89,7 @@
   animation: slideFromBottom 0.5s ease-in-out;
   background-color: rgba(162, 111, 52, 1);
 }
-.back-button:not(.hidden) {
+.backButton:not(.hidden) {
   position: sticky;
   bottom: 0px;
   display: block;
