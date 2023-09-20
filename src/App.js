@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import { useState } from "react";
 import { RemoveScrollBar } from "react-remove-scroll-bar";
 
